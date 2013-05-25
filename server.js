@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const Hapi = require('hapi');
+const good = require('good');
 
 const config = require('./lib/config');
 const routes = require('./routes');
@@ -47,7 +48,11 @@ server.ext('onPreResponse', function (request, next) {
     next();
 });
 
-server.pack.require('good', {
+server.pack.register({
+  name: 'good',
+  version: '0.5.7',
+  register: good.register
+  }, {
     subscribers: {
       console: ['ops', 'request', 'log']
     },
