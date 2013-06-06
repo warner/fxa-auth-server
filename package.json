@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "CONFIG_FILES=./test/config/test.json ./node_modules/.bin/mocha -R spec --recursive --timeout 10000",
-    "start": "scripts/start-local.sh"
+    "start": "scripts/start-local.sh",
+    "preinstall": "lockdown"
   },
   "repository": "",
   "license": "MPL 2.0",
@@ -29,7 +30,8 @@
     "good": "git://github.com/dannycoates/good.git#223e5d6db3",
     "heka": "git://github.com/dannycoates/heka-node.git#db91220ec0",
     "node-statsd": "0.0.7",
-    "toobusy": "0.2.3"
+    "toobusy": "0.2.3",
+    "lockdown": "0.0.4"
   },
   "devDependencies": {
     "awsbox": "0.4.5",
