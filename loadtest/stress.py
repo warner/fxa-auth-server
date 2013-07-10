@@ -12,7 +12,7 @@ from loads import TestCase
 
 class StressTest(TestCase):
 
-    server_url = "https://idp.profileinthecloud.net"
+    server_url = "http://idp.profileinthecloud.net"
 
     def test_entropy(self):
         response = self.app.get("/entropy", status=[200])
